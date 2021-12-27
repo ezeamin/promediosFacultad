@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Promedio facultad</title>
+    <style>
+      body{
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body class="container d-flex flex-column justify-content-center">
+    <div class="text-center">
+      <h1 class="display-1">Promedio</h1>
+      <hr class="mt-0 mb-2" />
+      <h4>Promedio año actual: <span id="promedioAñoActual"></span></h4>
+      <h4>Promedio año anterior: <span id="promedioAñoAnterior"></span></h4>
+      <h4>Promedio global: <span id="promedioGlobal"></span></h4>
+    </div>
+    <button
+      class="btn btn-success my-2 w-100 py-2"
+      data-bs-toggle="modal"
+      data-bs-target="#modalNota"
+    >
+      Agregar nota
+    </button>
+    <div
+      class="modal fade"
+      id="modalNota"
+      tabindex="-1"
+      aria-labelledby="modalTitulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitulo">Agregar nota</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="formNota">
+              <div class="form-group my-2">
+                <div class="text-start">
+                  <label for="">Año</label>
+                </div>
+                <input class="form-control" id="año" type="number" step="1" />
+                <div class="invalid-feedback">Ingrese un año valido</div>
+              </div>
+              <div class="form-group my-2">
+                <div class="text-start">
+                  <label for="">Materia</label>
+                </div>
+                <input class="form-control" id="materia" type="text" />
+                <div class="invalid-feedback">Ingrese una materia</div>
+              </div>
+              <div class="form-group my-2">
+                <div class="text-start">
+                  <label for="">Nota</label>
+                </div>
+                <input class="form-control" id="nota" type="number" />
+                <div class="invalid-feedback">Ingrese una nota valida</div>
+              </div>
+              <div class="modal-footer mt-3 text-end px-0">
+                <button type="submit" class="btn btn-success">Cargar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
