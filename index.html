@@ -34,6 +34,13 @@
     >
       Agregar nota
     </button>
+    <button
+      class="btn btn-danger my-2 w-100 py-2"
+      data-bs-toggle="modal"
+      data-bs-target="#modalSimularNota"
+    >
+      Simular nota
+    </button>
     <div
       class="modal fade"
       id="modalNota"
@@ -79,6 +86,41 @@
                 <button type="submit" class="btn btn-success">Cargar</button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="modalSimularNota"
+      tabindex="-1"
+      aria-labelledby="modalTitulo2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitulo2">Simular nota</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="formSimularNota">
+              <div class="form-group my-2">
+                <div class="text-start">
+                  <label for="">Nota</label>
+                </div>
+                <input class="form-control" id="notaSimulacion" type="number" />
+                <div class="invalid-feedback">Ingrese una nota valida</div>
+              </div>
+            </form>
+            <h6 class="mt-4">Promedio año actual: <span id="promedioAñoActualS"></span></h6>
+            <h6>Promedio año anterior: <span id="promedioAñoAnteriorS"></span></h6>
+            <h6>Promedio global: <span id="promedioGlobalS"></span></h6>
           </div>
         </div>
       </div>
